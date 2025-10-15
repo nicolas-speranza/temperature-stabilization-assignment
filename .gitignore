@@ -1,0 +1,7 @@
+server
+client
+*.o
+*.out
+*.log
+.DS_Store
+*.swp
