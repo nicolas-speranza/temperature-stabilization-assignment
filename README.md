@@ -146,4 +146,47 @@ Open four terminals and in each one run:
 
 The book is written is a very conversational style that is both enjoyable and accessible. I think you will enjoy reading it. Give it a try if you have time. If you want just to learn about serialization in network communication then read the Section **7.5 Serialization—How to Pack Data** (https://beej.us/guide/bgnet/html/split-wide/slightly-advanced-techniques.html#serialization). 
 
+-----------------------------------------------
+Build
+   make
+(Needs gcc and make.)
+
+Run (5 processes total)
+1) Start the server first
+   ./server <initial_central_temp> [port]
+   # example:
+   ./server 25.0          # listens on port 5000 by default
+
+2) Start four clients (each in its own terminal)
+   ./client <id 1..4> <initial_temp> [host] [port]
+   # examples (defaults host=127.0.0.1, port=5000):
+   ./client 1 10.0
+   ./client 2 30.0
+   ./client 3 15.0
+   ./client 4 45.0
+
+Custom port example
+   # server on a different port
+   ./server 25.0 5050
+   # clients point to that host/port
+   ./client 1 10.0 127.0.0.1 5050
+
+
+What happens
+   - External update: (3*ext + 2*central) / 5
+   - Central update: (2*central + Σ ext_i) / 6
+   - Stop when externals don’t change vs previous iteration (EPS = 1e-3). Server broadcasts DONE.
+
+Troubleshooting
+   # if a previous run left processes/ports busy
+   pkill server || true
+   pkill client || true
+
+Screenshots:
+![Screenshot](Screenshot1.pdf)
+![Screenshot](Screenshot2.pdf)
+![Screenshot](Screenshot3.pdf)
+![Screenshot](Screenshot4.pdf)
+![Screenshot](Screenshot5.pdf)
+![Screenshot](Screenshot6.pdf)
  
