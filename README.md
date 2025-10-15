@@ -183,10 +183,10 @@ Troubleshooting
    pkill client || true
 
 Screenshots:
-![Screenshot](Screenshot1.pdf)
-![Screenshot](Screenshot2.pdf)
-![Screenshot](Screenshot3.pdf)
-![Screenshot](Screenshot4.pdf)
-![Screenshot](Screenshot5.pdf)
-![Screenshot](Screenshot6.pdf)
+![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot2.png)
+![Screenshot](Screenshot3.png)
+![Screenshot](Screenshot4.png)
+![Screenshot](Screenshot5.png)
+![Screenshot](Screenshot6.png)
  
