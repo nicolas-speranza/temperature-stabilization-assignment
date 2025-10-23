@@ -161,7 +161,9 @@ Run (5 processes total)
 
 3) Start four clients (each in its own terminal)
    ./client <id 1..4> <initial_temp> [host] [port]
+   
    examples (defaults host=127.0.0.1, port=5000):
+   
    ./client 1 10.0
    ./client 2 30.0
    ./client 3 15.0
