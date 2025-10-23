@@ -154,21 +154,21 @@ Build
 Run (5 processes total)
 1) Start the server first
    ./server <initial_central_temp> [port]
-   # example:
+   example:
    ./server 25.0          # listens on port 5000 by default
 
 2) Start four clients (each in its own terminal)
    ./client <id 1..4> <initial_temp> [host] [port]
-   # examples (defaults host=127.0.0.1, port=5000):
+   examples (defaults host=127.0.0.1, port=5000):
    ./client 1 10.0
    ./client 2 30.0
    ./client 3 15.0
    ./client 4 45.0
 
 Custom port example
-   # server on a different port
+   server on a different port
    ./server 25.0 5050
-   # clients point to that host/port
+   clients point to that host/port
    ./client 1 10.0 127.0.0.1 5050
 
 
@@ -178,7 +178,7 @@ What happens
    - Stop when externals don’t change vs previous iteration (EPS = 1e-3). Server broadcasts DONE.
 
 Troubleshooting
-   # if a previous run left processes/ports busy
+   if a previous run left processes/ports busy
    pkill server || true
    pkill client || true
 
